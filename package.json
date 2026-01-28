@@ -1,0 +1,12 @@
+{
+  "name": "thenella-gospel-artist",
+  "version": "1.0.0",
+  "description": "Official website of THENELLA, gospel artist",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build needed for static site'"
+  },
+  "keywords": ["gospel", "artist", "music", "thenella"],
+  "author": "THENELLA",
+  "license": "MIT"
+}
