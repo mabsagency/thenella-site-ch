@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THENELLA - Gospel Artist | Music & Videos</title>
+    <meta name="description" content="Official website of THENELLA, gospel artist. Listen to her Spotify tracks and watch her YouTube videos.">
+    <meta name="keywords" content="THENELLA, gospel artist, gospel music, Christian music, Spotify, YouTube, Instagram">
+    <meta name="author" content="THENELLA">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B0000",
+                        secondary: "#2C3E50",
+                        accent: "#F39C12",
+                        light: "#F8F9FA",
+                        dark: "#1A1A1A"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #8B0000 0%, #2C3E50 100%);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #F39C12;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .spotify-embed {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        /* Professional enhancements */
+        .container {
+            max-width: 1200px;
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            letter-spacing: -0.5px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-light text-dark min-h-screen">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-music text-white text-lg"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-primary font-serif">THENELLA</h1>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-secondary hover:text-primary font-medium transition-colors duration-300" onclick="event.preventDefault(); document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home</a>
+                    <a href="#music" class="text-secondary hover:text-primary font-medium transition-colors duration-300" onclick="event.preventDefault(); document.getElementById('music').scrollIntoView({behavior: 'smooth'});">Music</a>
+                    <a href="#videos" class="text-secondary hover:text-primary font-medium transition-colors duration-300" onclick="event.preventDefault(); document.getElementById('videos').scrollIntoView({behavior: 'smooth'});">Videos</a>
+                    <a href="#about" class="text-secondary hover:text-primary font-medium transition-colors duration-300" onclick="event.preventDefault(); document.getElementById('about').scrollIntoView({behavior: 'smooth'});">About</a>
+                    <a href="#social" class="text-secondary hover:text-primary font-medium transition-colors duration-300" onclick="event.preventDefault(); document.getElementById('social').scrollIntoView({behavior: 'smooth'});">Social Media</a>
+                </div>
+                
+                <div class="mt-4 md:mt-0 flex space-x-4">
+                    <a href="https://open.spotify.com/artist/7CztpOsMYyg2yYEdhhN6kh" target="_blank" class="text-secondary hover:text-primary social-icon">
+                        <i class="fab fa-spotify text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ThenellaOfficiel" target="_blank" class="text-secondary hover:text-primary social-icon">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thenellaofficiel6" target="_blank" class="text-secondary hover:text-primary social-icon">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-fade-in">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-8 font-serif leading-tight">THENELLA</h2>
+                    <p class="text-2xl mb-6 font-light opacity-95">Gospel Artist | Worship Leader | Songwriter</p>
+                    <p class="text-lg mb-10 opacity-85 leading-relaxed max-w-md">Spreading the message of hope and faith through powerful gospel music that touches hearts and transforms lives.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#music" class="btn-primary bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 text-center" onclick="event.preventDefault(); document.getElementById('music').scrollIntoView({behavior: 'smooth'});">
+                            Listen Now
+                        </a>
+                        <a href="#videos" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 text-center" onclick="event.preventDefault(); document.getElementById('videos').scrollIntoView({behavior: 'smooth'});">
+                            Watch Videos
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animate-slide-up">
+                    <div class="relative">
+                        <img 
+                            src="images/th1.jpg" 
+                            alt="THENELLA - Gospel Artist" 
+                            class="rounded-3xl shadow-2xl w-full max-w-md h-auto"
+                            loading="lazy"
+                        />
+                        <div class="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-full shadow-lg">
+                            <i class="fas fa-play text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section - Spotify Embed -->
+    <section id="music" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4 section-title font-serif">My Music on Spotify</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-8">Listen to my latest gospel tracks and worship songs. Follow me on Spotify to stay updated with new releases.</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="spotify-embed shadow-2xl rounded-2xl overflow-hidden mb-16">
+                    <iframe 
+                        data-testid="embed-iframe" 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/artist/7CztpOsMYyg2yYEdhhN6kh?utm_source=generator" 
+                        width="100%" 
+                        height="352" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center card-hover border border-blue-200">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-headphones text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-3">Stream Now</h3>
+                        <p class="text-gray-700">Available on all major streaming platforms</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl text-center card-hover border border-yellow-200">
+                        <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-music text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-3">Latest Releases</h3>
+                        <p class="text-gray-700">New gospel songs added regularly</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl text-center card-hover border border-red-200">
+                        <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-heart text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-3">Worship Together</h3>
+                        <p class="text-gray-700">Join the community of believers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section - YouTube -->
+    <section id="videos" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4 section-title font-serif">Latest Videos</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-8">Watch my gospel performances, worship sessions, and behind-the-scenes content on YouTube.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Video 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative w-full bg-black" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/GUnkfDqdkEs" title="Gospel Worship Session" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Gospel Worship Session</h3>
+                        <p class="text-gray-600 mb-4">Powerful worship session featuring uplifting gospel music and heartfelt praise.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative w-full bg-black" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/ycVwgBc-S8A" title="Live Gospel Concert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Live Gospel Concert</h3>
+                        <p class="text-gray-600 mb-4">Captivating live performance from a recent gospel concert event.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative w-full bg-black" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/DdimLmZ55oY" title="Worship & Praise Collection" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Worship & Praise Collection</h3>
+                        <p class="text-gray-600 mb-4">A collection of worship songs and praise music for spiritual upliftment.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Video 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative w-full bg-black" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/7fCbSuJbGXc" title="Gospel Medley Performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Gospel Medley Performance</h3>
+                        <p class="text-gray-600 mb-4">Special medley featuring classic and contemporary gospel songs.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative w-full bg-black" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/4hs0SjN7V7E" title="Acoustic Gospel Session" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Acoustic Gospel Session</h3>
+                        <p class="text-gray-600 mb-4">Intimate acoustic performance of gospel favorites in a stripped-down setting.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative w-full bg-black" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/ilFvkU2HRiQ" title="Praise & Worship Special" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Praise & Worship Special</h3>
+                        <p class="text-gray-600 mb-4">Special praise and worship session featuring uplifting gospel music.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="https://www.youtube.com/@ThenellaOfficiel" target="_blank" class="inline-flex items-center btn-primary bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    <i class="fab fa-youtube mr-3 text-xl"></i> Subscribe on YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img 
+                        src="images/th3.jpg" 
+                        alt="THENELLA - About the Artist" 
+                        class="rounded-3xl shadow-2xl w-full max-w-md h-auto"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-8 section-title font-serif">About THENELLA</h2>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                        THENELLA is a passionate gospel artist dedicated to creating music that inspires faith, brings hope, and leads people into authentic worship experiences.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        With a voice that carries both power and tenderness, THENELLA's music blends traditional gospel roots with contemporary sounds, creating a unique worship experience that resonates with people of all ages.
+                    </p>
+                    <p class="text-gray-600 mb-10 text-lg leading-relaxed">
+                        Her mission is to use music as a tool for ministry, spreading the message of God's love and grace through every song and performance.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-md">
+                                <i class="fas fa-microphone text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Live Performances</h4>
+                                <p class="text-gray-600">Churches & Events</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-md">
+                                <i class="fas fa-pen-fancy text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Songwriting</h4>
+                                <p class="text-gray-600">Original Compositions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="py-20 bg-gradient-to-r from-secondary to-primary text-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 section-title font-serif">Connect With Me</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto text-lg mt-8">Follow me on social media to stay updated with my latest music, videos, and performances.</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- YouTube Card -->
+                    <div class="bg-white bg-opacity-15 rounded-2xl p-10 text-center card-hover hover:bg-opacity-25 border border-white border-opacity-20">
+                        <div class="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
+                            <i class="fab fa-youtube text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">YouTube</h3>
+                        <p class="text-gray-300 mb-8 text-lg">Watch my latest gospel performances, worship sessions, and music videos.</p>
+                        <a href="https://www.youtube.com/@ThenellaOfficiel" target="_blank" class="inline-flex items-center btn-primary bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                            <i class="fab fa-youtube mr-2"></i> Subscribe Now
+                        </a>
+                        <p class="text-gray-400 text-sm mt-6">@ThenellaOfficiel</p>
+                    </div>
+                    
+                    <!-- Instagram Card -->
+                    <div class="bg-white bg-opacity-15 rounded-2xl p-10 text-center card-hover hover:bg-opacity-25 border border-white border-opacity-20">
+                        <div class="w-24 h-24 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
+                            <i class="fab fa-instagram text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Instagram</h3>
+                        <p class="text-gray-300 mb-8 text-lg">Behind-the-scenes photos, updates, and personal moments from my journey.</p>
+                        <a href="https://www.instagram.com/thenellaofficiel6" target="_blank" class="inline-flex items-center btn-primary bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
+                            <i class="fab fa-instagram mr-2"></i> Follow Me
+                        </a>
+                        <p class="text-gray-400 text-sm mt-6">@thenellaofficiel6</p>
+                    </div>
+                    
+                    <!-- Spotify Card -->
+                    <div class="bg-white bg-opacity-15 rounded-2xl p-10 text-center card-hover hover:bg-opacity-25 border border-white border-opacity-20">
+                        <div class="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
+                            <i class="fab fa-spotify text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Spotify</h3>
+                        <p class="text-gray-300 mb-8 text-lg">Stream my gospel music and add my songs to your worship playlists.</p>
+                        <a href="https://open.spotify.com/artist/7CztpOsMYyg2yYEdhhN6kh" target="_blank" class="inline-flex items-center btn-primary bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            <i class="fab fa-spotify mr-2"></i> Follow on Spotify
+                        </a>
+                        <p class="text-gray-400 text-sm mt-6">THENELLA</p>
+                    </div>
+                </div>
+                
+                <div class="pt-12 border-t border-white border-opacity-20">
+                    <div class="text-center">
+                        <h3 class="text-3xl font-bold mb-8">Stay Connected</h3>
+                        <p class="text-gray-300 mb-12 max-w-2xl mx-auto text-lg">
+                            Join my community of followers and be the first to know about new releases, upcoming events, and exclusive content.
+                        </p>
+                        
+                        <div class="flex justify-center gap-6 flex-wrap">
+                            <a href="https://www.youtube.com/@ThenellaOfficiel" target="_blank" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-red-600 hover:bg-opacity-100 transition-all duration-300 border border-white border-opacity-30">
+                                <i class="fab fa-youtube text-3xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/thenellaofficiel6" target="_blank" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-pink-600 hover:bg-opacity-100 transition-all duration-300 border border-white border-opacity-30">
+                                <i class="fab fa-instagram text-3xl"></i>
+                            </a>
+                            <a href="https://open.spotify.com/artist/7CztpOsMYyg2yYEdhhN6kh" target="_blank" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-green-600 hover:bg-opacity-100 transition-all duration-300 border border-white border-opacity-30">
+                                <i class="fab fa-spotify text-3xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 border-t-4 border-accent">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-white text-lg"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold font-serif">THENELLA</h2>
+                    </div>
+                    <p class="text-gray-400">Gospel Artist | Worship Leader | Ministry</p>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold text-lg mb-4 text-accent">Quick Links</h4>
+                    <div class="flex space-x-6">
+                        <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                        <a href="#music" class="text-gray-400 hover:text-white transition-colors">Music</a>
+                        <a href="#videos" class="text-gray-400 hover:text-white transition-colors">Videos</a>
+                        <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <h4 class="font-bold text-lg mb-4 text-accent">Follow</h4>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="https://www.youtube.com/@ThenellaOfficiel" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/thenellaofficiel6" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/artist/7CztpOsMYyg2yYEdhhN6kh" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="text-center">
+                    <p class="text-gray-400 mb-2">&copy; <span id="currentYear"></span> THENELLA. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm">Created with faith and passion for gospel music.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Define data at the beginning
+        const videoData = [
+            {
+                "id": 1,
+                "title": "Gospel Worship Session",
+                "url": "https://youtu.be/GUnkfDqdkEs?si=IyD1L0CSk436KuwL",
+                "description": "Powerful worship session featuring uplifting gospel music and heartfelt praise.",
+                "platform": "YouTube"
+            },
+            {
+                "id": 2,
+                "title": "Live Gospel Concert",
+                "url": "https://youtu.be/ycVwgBc-S8A?si=QttyrP2qOGnKvJ5H",
+                "description": "Captivating live performance from a recent gospel concert event.",
+                "platform": "YouTube"
+            },
+            {
+                "id": 3,
+                "title": "Worship & Praise Collection",
+                "url": "https://youtu.be/DdimLmZ55oY?si=-yZijhefR5VFP2h0",
+                "description": "A collection of worship songs and praise music for spiritual upliftment.",
+                "platform": "YouTube"
+            },
+            {
+                "id": 4,
+                "title": "Gospel Medley Performance",
+                "url": "https://youtu.be/7fCbSuJbGXc?si=cvVZrz8X_WppbLO_",
+                "description": "Special medley featuring classic and contemporary gospel songs.",
+                "platform": "YouTube"
+            },
+            {
+                "id": 5,
+                "title": "Acoustic Gospel Session",
+                "url": "https://youtu.be/4hs0SjN7V7E?si=jbIFYHg7-4dNHzPR",
+                "description": "Intimate acoustic performance of gospel favorites in a stripped-down setting.",
+                "platform": "YouTube"
+            },
+            {
+                "id": 6,
+                "title": "Praise & Worship Special",
+                "url": "https://youtu.be/ilFvkU2HRiQ?si=94kOtZCi5v4S7-Ok",
+                "description": "Special praise and worship session featuring uplifting gospel music.",
+                "platform": "YouTube"
+            }
+        ];
+
+        const socialLinks = [
+            {
